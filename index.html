@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedesk</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/pokemons.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/search-bar.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/utils.js"></script>
+    
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading">
+            <img src="./img/pikachu-gif.gif" alt="" class="loading__image">
+            <p class="loading__text" data-text="Loading...">Loading...</p>
+        </div>
+
+    </div>
+    <header>
+        <div class="container">
+            <h1>Pokedex</h1>
+            <div class="search-bar">
+                <input type="text" class="search-bar__input search-bar__input-js">
+            </div>
+        </div>
+        <ul class="pokeballs">
+            <li class="pokeballs__item first"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+            <li class="pokeballs__item"></li>
+        </ul>
+        <div class="filter-button"></div>
+    </header>
+    <main>
+        <div class="filter">
+            <div class="filter__buttons-container"></div>
+        </div>
+        <div class="container pokemons-container-js"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.loading-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 3;
+}
+
+.loading {
+    width: 100%;
+    max-width: size(600);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+
+    .loading__image {
+        width: 100%;
+    }
+    .loading__text {
+        font-family: $amaranth;
+        font-size: size(50);
+        position: relative;
+        color: $white;
+        -webkit-text-stroke: 2px $mediumGrey;
+        width: 100%;
+        max-width: 215px;
+        margin: 0 auto;
+        @media (min-width: $mobileMaxWidth) {
+            font-size: size(70);
+            line-height: size(70);
+            max-width: size(300);
+        }
+        &::before {
+            content: attr(data-text);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: size(80);
+            color: $darkGrey;
+            -webkit-text-stroke: 0;
+            overflow: hidden;
+            text-align: left;
+            animation: loading-animation 5s ease-in-out alternate infinite;
+        }
+    }
+}

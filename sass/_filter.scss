@@ -1,0 +1,113 @@
+.filter-button {
+    width: size(80);
+    height: size(40);
+    background-color: $lighterGrey;
+    margin-left: size(20);
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    bottom: -4px;
+
+    &:before {
+        content: 'Filtrar';
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: $opensansBold;
+        font-size: size(18);
+    }
+}
+
+.filter {
+    background-color: $lighterGrey;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    top: size(-85);
+    z-index: 0;
+    transition: top 0.3s;
+    padding: size(20);
+    box-shadow: 1px 0px 3px 1px $mediumGrey;
+
+    
+    &__buttons-container {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        gap: size(15);
+    }
+
+    &__button {
+        cursor: pointer;
+        border: 0;
+        padding: size(10) size(20);
+        border-radius: 10px;
+        font-family: $opensansBold;
+        font-size: size(16);
+        cursor: pointer;
+        text-transform: capitalize;
+        color: $white;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            box-shadow: 1px 0px 3px 1px #ccc;
+        }
+
+        &.fire {
+            background-color: $orange;
+        }
+        &.grass {
+            background-color: $green;
+        }
+        &.water {
+            background-color: $blue;
+        }
+        &.bug {
+            background-color: $vividGreen;
+        }
+        &.poison {
+            background-color: $purple;
+        }
+        &.normal {
+            background-color: $grey;
+        }
+        &.ground {
+            background-color: $brown;
+        }
+        &.electric {
+            background-color: $yellow;
+        }
+        &.fairy {
+            background-color: $pink;
+        }
+        &.fighting {
+            background-color: $darkRed;
+        }
+        &.psychic {
+            background-color: $darkPink;
+        }
+        &.rock {
+            background-color: $ochre;
+        }
+        &.ghost {
+            background-color: $darkPurple;
+        }
+        &.ice {
+            background-color: $aqua;
+        }
+        &.dragon {
+            background-color: $vividPurple;
+        }
+        &.dark {
+            background-color: $lightBrown;
+        }
+        &.all {
+            background-color: $red;
+        }
+    }
+}

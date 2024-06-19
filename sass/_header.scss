@@ -1,0 +1,145 @@
+header {
+    background-color: $red;
+    position: relative;
+    z-index: 1;
+    box-shadow: 1px 0px 3px 1px $mediumGrey;
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding-bottom: 0;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .pokeballs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &__item {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            animation: pokeballs 25s linear infinite;
+            bottom: -150px;
+            background-image: url("../img/pokeball-transparent.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+
+            &:nth-child(1) {
+                left: 25%;
+                width: 80px;
+                height: 80px;
+                animation-delay: 0s;
+            }
+            &:nth-child(2) {
+                left: 10%;
+                width: 20px;
+                height: 20px;
+                animation-delay: 2s;
+                animation-duration: 12s;
+            }
+            &:nth-child(3) {
+                left: 70%;
+                width: 20px;
+                height: 20px;
+                animation-delay: 4s;
+            }
+            &:nth-child(4) {
+                left: 40%;
+                width: 60px;
+                height: 60px;
+                animation-delay: 0s;
+                animation-duration: 18s;
+            }
+            &:nth-child(5) {
+                left: 65%;
+                width: 20px;
+                height: 20px;
+                animation-delay: 0s;
+            }
+            &:nth-child(6) {
+                left: 75%;
+                width: 110px;
+                height: 110px;
+                animation-delay: 3s;
+            }
+            &:nth-child(7) {
+                left: 35%;
+                width: 150px;
+                height: 150px;
+                animation-delay: 7s;
+            }
+            &:nth-child(8) {
+                left: 50%;
+                width: 25px;
+                height: 25px;
+                animation-delay: 15s;
+                animation-duration: 45s;
+            }
+            &:nth-child(9) {
+                left: 20%;
+                width: 15px;
+                height: 15px;
+                animation-delay: 2s;
+                animation-duration: 35s;
+            }
+            &:nth-child(10) {
+                left: 85%;
+                width: 150px;
+                height: 150px;
+                animation-delay: 0s;
+                animation-duration: 11s;
+            }
+            
+        }
+
+        
+    }
+}
+
+.search-bar {
+    width: 100%;
+    max-width: size(300);
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        width: size(25);
+        height: size(35);
+        background-image: url('../img/search-icon2.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        opacity: 0.4;
+    }
+
+    @media (min-width: $contentMaxWidth) {
+        max-width: size(400);
+    }
+}
+
+input {
+    height: size(40);
+    width: 100%;
+    border: 0;
+    margin-bottom: size(20);
+    box-shadow: 2px 2px 4px -1px $darkGrey;
+    border-radius: 20px;
+    padding: 0 15px;
+
+    &:focus {
+        outline: none;
+    }
+}

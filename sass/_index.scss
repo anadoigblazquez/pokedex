@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+   height: 100%;
+   width: 100%;
+   
+}
+
+body {
+    font-family: $opensansRegular;
+    font-size: $textFontSize;
+    color: $darkGrey;
+    position: relative;
+}
+
+main {
+    background-color: $lighterGrey;
+
+    .container {
+        padding: size(40) size(20);
+    }
+}
+
+h1 {
+    font-size: size(80);
+    color: $white;
+    line-height: size(80);
+    font-family: $amaranth;
+    margin-bottom: size(20);
+    text-shadow: 2px 2px 3px $darkGrey;
+}
+
+.container {
+    width: 100%;
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: size(30);
+    padding: $mobileMainPadding;
+
+    @media (min-width: $mobileMaxWidth) {
+        padding: $desktopMainPadding;
+    }
+}
+
+.card {
+    border-radius: size(20);
+    flex-basis: size(210);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 3px 5px -4px $darkGrey;
+    padding: size(15) size(1) size(1) size(1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        bottom: 0;
+        width: 110%;
+        height: 45%;
+        transition: all 0.5s ease;
+    }
+
+    &:hover {
+        .card__img {
+            transform: scale(1.1);
+        }
+        &:after {
+            bottom: -35px;
+            transform: rotate(10deg);
+            height: 50%;
+            width: 150%;
+        }
+        
+        .info {
+            &__more-info {
+                bottom: 10px;
+            }
+        }
+    }
+
+    &__img {
+        width: size(150);
+        height: size(150);
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+    
+    &__pokemon-number {
+        font-family: $opensansBold;
+        font-size: size(70);
+        color: $white;
+        margin-bottom: size(-60);
+        opacity: 0.7;
+    }
+
+    .info {
+        width: 100%;
+        align-self: flex-end;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        padding-bottom: size(5);
+        transition: all 0.5s ease;
+
+        &__title {
+            font-family: $amaranth;
+            font-size: size(35);
+            margin: 0 0 size(20) 0;
+            padding-top: size(10);
+            text-transform: capitalize;
+        }
+
+        &__pokemon-type {
+            display: flex;
+            justify-content: center;
+            gap: size(10);
+            margin-bottom: size(30);
+
+            li {
+                width: size(30);
+                height: size(30);
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        
+        &__more-info {
+            border: 0;
+            padding: size(10) size(15);
+            font-family: $opensansBold;
+            color: #fff;
+            background-color: $red;
+            border-radius: 5px;
+            font-size: size(16);
+            line-height: size(16);
+            position: absolute;
+            bottom: -40px;
+            left: 20px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+    }
+    &--fire {
+        background-color: $orange;
+    }
+    &--grass {
+        background-color: $green;
+    }
+    &--water {
+        background-color: $blue;
+    }
+    &--bug {
+        background-color: $vividGreen;
+    }
+    &--poison {
+        background-color: $purple;
+    }
+    &--normal {
+        background-color: $grey;
+    }
+    &--ground {
+        background-color: $brown;
+    }
+    &--electric {
+        background-color: $yellow;
+    }
+    &--fairy {
+        background-color: $pink;
+    }
+    &--fighting {
+        background-color: $darkRed;
+    }
+    &--psychic {
+        background-color: $darkPink;
+    }
+    &--rock {
+        background-color: $ochre;
+    }
+    &--ghost {
+        background-color: $darkPurple;
+    }
+    &--ice {
+        background-color: $aqua;
+    }
+    &--dragon {
+        background-color: $vividPurple;
+    }
+    &--dark {
+        background-color: $lightBrown;
+    }
+}
+
